@@ -4,7 +4,7 @@ const magazineService = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getMagazine: build.query({
       query: () => ({
-        url: "/recipes",
+        url: "/all",
         method: "GET",
       }),
       providesTags: ["magazine"],

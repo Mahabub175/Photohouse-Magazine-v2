@@ -1,18 +1,15 @@
-"use client";
-
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../styles/globals.css";
-import { Provider } from "react-redux";
-import { store } from "@/redux/store";
+import "@/styles/globals.css";
 import { Toaster } from "react-hot-toast";
+import ReduxProvider from "@/provider/ReduxProvider";
+import NavBar from "@/components/shared/Navbar/NavBar";
+import Footer from "@/components/shared/Footer/Footer";
+import { useRouter } from "next/router";
 
-const inter = Inter({ subsets: ["latin"] });
-
-// export const metadata: Metadata = {
-//   title: "PhotoHouse Magazine",
-//   description: "A Magazine Showcasing the Best Photos",
-// };
+export const metadata: Metadata = {
+  title: "Photohouse",
+  description: "A Magazine Showcasing the Best Photos",
+};
 
 export default function RootLayout({
   children,
@@ -21,10 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Provider store={store}>
-        <body className={inter.className}>{children}</body>
-        <Toaster />
-      </Provider>
+      <body>
+        <ReduxProvider>
+          <NavBar />
+          {children}
+          <Footer />
+          <Toaster />
+        </ReduxProvider>
+      </body>
     </html>
   );
 }
