@@ -1,6 +1,14 @@
+import Banner from "@/components/HomePage/Banner";
+import MagazineSlider from "@/components/HomePage/MagazineSlider";
+import SocialShow from "@/components/HomePage/SocialShow";
+
 const Home = () => {
   return (
-    <main className="flex h-screen items-center justify-center">something</main>
+    <main>
+      <Banner />
+      <SocialShow />
+      <MagazineSlider />
+    </main>
   );
 };
 
