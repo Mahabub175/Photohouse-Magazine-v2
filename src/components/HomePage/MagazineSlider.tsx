@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const MagazineSlider = () => {
   const { data } = useGetMagazineQuery(undefined);
+
   const settings = {
     className: "center",
     centerMode: true,

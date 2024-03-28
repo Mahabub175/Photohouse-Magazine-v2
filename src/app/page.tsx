@@ -1,4 +1,5 @@
 import Banner from "@/components/HomePage/Banner";
+import InstaGallery from "@/components/HomePage/InstaGallery";
 import MagazineSlider from "@/components/HomePage/MagazineSlider";
 import SocialShow from "@/components/HomePage/SocialShow";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <SocialShow />
       <MagazineSlider />
+      <InstaGallery />
     </main>
   );
 };
